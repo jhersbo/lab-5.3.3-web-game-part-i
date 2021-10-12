@@ -1,13 +1,39 @@
-let greenCharacter = document.createElement('img')
-greenCharacter.src = 'assets/green-character.gif'
-greenCharacter.style.position = 'fixed'
-greenCharacter.style.left = '100px'
-greenCharacter.style.bottom = '100px'
-document.body.append(greenCharacter)
+function newImage(b, src, left, bottom){
+    let b = document.createElement('img')
+    b.src = src
+    b.style.position = 'fixed'
+    b.style.left = left
+    b.style.bottom = bottom
+    document.body.append(b)
+}
 
-let pineTree = document.createElement('img')
-pineTree.src = 'assets/pine-tree.png'
-pineTree.style.position = 'fixed'
-pineTree.style.left = '450px'
-pineTree.style.bottom = '200px'
-document.body.append(pineTree)
+newImage(greenCharacter, './assets/green-character.gif', '100px', '100px');
+
+newImage(pineTree, './assets/pine-tree.png', '450px', '200px');
+
+newImage(tree, './assets/tree.png', '200px', '300px');
+
+newImage(pillar, './assets/pillar.png', '350px', '100px');
+
+newImage(crate, './assets/crate.png', '150px', '200px');
+
+newImage(well, './assets/well.png', '500px', '425px');
+
+function newItem(b, src, left, bottom){
+    newImage(b, src, left, bottom);
+    b.addEventListener('dblclick', function(){
+        b.remove()
+    })
+}
+
+newItem(shield, './assets/shield.png', '165px', '185px');
+
+newItem(staff, './assets.staff.png', '600px', '100px');
+
+
+
+
+
+
+
+l
