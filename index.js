@@ -1,39 +1,33 @@
-function newImage(b, src, left, bottom){
-    let b = document.createElement('img')
-    b.src = src
-    b.style.position = 'fixed'
-    b.style.left = left
-    b.style.bottom = bottom
-    document.body.append(b)
+function newImage(src, left, bottom){
+    let image = document.createElement('img')
+    image.src = src
+    image.style.position = 'fixed'
+    image.style.left = left
+    image.style.bottom = bottom
+    document.body.append(image)
+    return image
 }
 
-newImage(greenCharacter, './assets/green-character.gif', '100px', '100px');
+newImage('./assets/green-character.gif', '100px', '100px');
 
-newImage(pineTree, './assets/pine-tree.png', '450px', '200px');
+newImage('./assets/pine-tree.png', '450px', '200px');
 
-newImage(tree, './assets/tree.png', '200px', '300px');
+newImage('./assets/tree.png', '200px', '300px');
 
-newImage(pillar, './assets/pillar.png', '350px', '100px');
+newImage('./assets/pillar.png', '350px', '100px');
 
-newImage(crate, './assets/crate.png', '150px', '200px');
+newImage('./assets/crate.png', '150px', '200px');
 
-newImage(well, './assets/well.png', '500px', '425px');
+newImage('./assets/well.png', '500px', '425px');
 
-function newItem(b, src, left, bottom){
-    newImage(b, src, left, bottom);
-    b.addEventListener('dblclick', function(){
-        b.remove()
+function newItem(src, left, bottom){
+    newImage(src, left, bottom)
+    image.addEventListener('click', function(){
+        image.remove()
     })
 }
 
-newItem(shield, './assets/shield.png', '165px', '185px');
+newItem('./assets/shield.png', '165px', '185px');
 
-newItem(staff, './assets.staff.png', '600px', '100px');
+newItem('./assets.staff.png', '600px', '100px');
 
-
-
-
-
-
-
-l
