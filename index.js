@@ -21,9 +21,9 @@ newImage('./assets/crate.png', '150px', '200px');
 newImage('./assets/well.png', '500px', '425px');
 
 function newItem(src, left, bottom){
-    newImage(src, left, bottom)
-    image.addEventListener('click', function(){
-        image.remove()
+    let item = newImage(src, left, bottom)
+    item.addEventListener('click', function(){
+        item.remove()
     })
 }
 
